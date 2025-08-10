@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    // This way we can select a particular element 
+    const parent = document.querySelector('.parent')
+
+    // quesyselectorall will return us a nodelist instead of an array so to iterate through it we have to use for each loop because nodelist also has this method 
+    
+    a = document.getElementsByClassName('list-item') // this command will give us an html collection which doesnot even has htmlcollection so to iterate through it we have to use we have to convert it into array 
+    // so to convert it we have to use 
+    myconvertedarray = Array.from(a);
+
+    // console.log(parent);
+
+    // If we want to select any children of the selected tag that we can do this 
+    // console.log(parent.children);
+
+    // If we want the inner html of any sepecfic container than we can use this 
+    // console.log(parent.children[1].innerHTML);
+
+    // if we want to take the content of any container than there are three methods one is innerHTML , innerText , textContent and the difference between them is innertext won't give those content where the styling is display none but textContent will give the text which is displayed none 
+    // innerHtml also give any span or some other text that is inside the container that we selected s
+
+
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+
+    // If we wwant to change a particular container 
+    parent.children[1].style.color = "orange"
+
+
+    // if we want to get the id , class , attribute of any particular container 
+    document.getElementById('title').id
+    document.getElementById('title').className
+    document.getElementById('title').getAttribute('id')
+
+    // if we want to set any attribute than (while setting any attribute it will always rewrite it)
+    document.getElementById('title').setAttribute('class' , 'heading , gg') // now it will have two class heading and gg
+
+    // will give the first element 
+    // console.log(parent.firstElementChild);
+
+    // will give the last element 
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+
+    // will give the next sibling 
+    // console.log(dayOne.nextElementSibling);
+
+    
+    console.log("NODES: ", parent.childNodes);
+</script>
+</html>

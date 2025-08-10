@@ -1,0 +1,34 @@
+/* Background contain these many features 
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+
+
+The child combinator selects all elements that are the children of a specified element.
+The following example selects all <p> elements that are children of a <div> element:
+
+div > p {
+  background-color: yellow;
+}
+
+
+
+div {
+  animation: example 5s linear 2s infinite alternate;
+}
+
+
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+flex-grow 
+flex shrink
+
+ */
