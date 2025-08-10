@@ -109,4 +109,17 @@ const fs = require('fs');
 
 
 
+// How to create hhtp server from basic 
 
+const http = require('http')
+const fs = require('fs')
+
+const serverCreat = http.createServer((req,res)=>{
+    const gg = fs.appendFileSync('./gg.txt' , "kya append karna hai vo" );
+    res.end("done from our side")
+})
+
+serverCreat.listen(8000 , ()=>{
+    console.log('server is successfully connected ');
+    
+})
