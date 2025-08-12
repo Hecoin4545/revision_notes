@@ -1393,4 +1393,114 @@ using namespace std;
 
 
 
-// longest consecutive sequence 
+// longest consecutive sequence :-
+
+// method 01 :- better force 
+
+// int longest_sequence(int arr[] , int n){
+//     for(int i = 0;i<n-1;i++){
+//         int mini = i;
+//         for(int j = i;j<n;j++){
+//             if(arr[mini] > arr[j]){
+//                 mini = j;
+//             }
+//         }
+//         swap(arr[mini] , arr[i]);
+//     }
+
+
+//     int cnt  = 0;
+//     int news = 0;
+//     for(int i =1;i<n;i++){
+//         if(arr[i] -1  == arr[i-1]){
+//             cnt++;
+//         }else{
+//             news = max(news , cnt);
+//             cnt = 0;
+//         }
+//     }
+//     news = max(news , cnt);
+//     return news +1 ;
+// }
+
+// int main(){
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for(int i =0;i<n;i++){
+//         cin >> arr[i];
+//     }
+//     cout << longest_sequence(arr , n);
+// }
+
+
+// optimal Solution  :- method 02 
+
+// int longest_sequence(int arr[] , int n){
+//     int longest = 1;
+//     unordered_set<int> st;
+//     for(int i = 0;i<n;i++){
+//         st.insert(arr[i]);
+//     }
+
+//     for(auto it:st){
+//         if(st.find(it-1) == st.end()){
+//             int cnt = 1;
+//             int x = it;
+//             while(st.find(x+1) != st.end()){
+//                 x = x+1;
+//                 cnt = cnt+1;
+//             }
+//             longest = max(longest , cnt);
+//         }
+//     }
+//     return longest;
+// }
+
+
+// int main(){
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for(int i =0;i<n;i++){
+//         cin >> arr[i];
+//     }
+//     cout << longest_sequence(arr , n);
+// }
+
+
+
+
+
+// set matrix zero 
+
+// method 01 :- brute force 
+
+
+void set_matrix_zero(){
+
+}
+
+
+int main(){
+    int n;
+    cin >> n;
+    int m;
+    cin >> m;
+    int arr[n][m];
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<m;j++){
+            cin >> arr[i][j];
+        }
+    }
+
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<m;j++){
+            cout << arr[i][j];
+        }
+    }
+
+}
+
+
+
